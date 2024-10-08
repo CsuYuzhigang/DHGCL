@@ -42,7 +42,6 @@ def split_dataset(dataset, num_nodes):  # 划分数据集
     val_mask = th.full((num_nodes,), False)  # 验证集
     test_mask = th.full((num_nodes,), False)  # 测试集
 
-    random.seed(2024)
     train_mask_index, val_mask_index, test_mask_index = th.LongTensor([]), th.LongTensor([]), th.LongTensor([])
     # 对每个类别均匀划分
     for i in range(n_classes):
